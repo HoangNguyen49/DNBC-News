@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 25%;
+}
+
+.logotren {
+    display: flex;
+    align-items: center;
+}
+
+.formsearch {
+    padding-left: 30px;
+}
+
+ul.menungang{
+    display: flex;
+    list-style: none;
+    width: 900px;
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: space-around;
+}
+.menutren{
+    background-color: rgb(43, 32, 32);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul.menungang a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: yellow;
+    font-size: 15px;
+    display: block;
+    padding-top: 7px;
+    padding-left: 45px;
+    padding-right: 45x;
+    transition: 0.3s;
+}
+ul.menungang a:hover {
+    color: rgb(174, 185, 52);
+}
+ul.menungang input[]{
+    float: right;
+}
+
+.slideshow {
+    background-color: blue;
+}
+
+.slideshow img {
+    object-fit: fill;
+    width: 100%;
+    height: 200px;
+}
