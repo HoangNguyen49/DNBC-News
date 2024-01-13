@@ -1,0 +1,28 @@
+.container h6{
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    padding-right: 2%;
+}
+.container p{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    padding-right: 20%;
+    margin: 0px auto 24px;
+    text-align: justify;
+    padding-left: 20%;
+}
+.container img {
+    width: 80%;
+    padding-left: 20%;
+    display: flex;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+h3{
+    padding-left: 11%;
+}

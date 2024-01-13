@@ -1,104 +1,269 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-img {
-    width: 25%;
+    box-sizing: border-box;
 }
 
-.logotren {
+body {
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    background-color: white;
+}
+
+header {
+    background-color: antiquewhite;
+}
+
+header img {
+    margin: 0 15px;
+}
+
+nav {
+    min-width: 800px;
+    background: linear-gradient(139deg, rgba(204,46,133,1) 0%, rgba(205,51,139,1) 98%);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+nav ul {
     display: flex;
     align-items: center;
-}
-
-.formsearch {
-    padding-left: 30px;
-}
-
-ul.menungang{
-    display: flex;
     list-style: none;
-    width: 900px;
-    margin-left: 40px;
-    margin-right: 40px;
-    justify-content: space-around;
+    margin: 0 15px;
+    color: #ffaecf;
 }
-.menutren{
-    background-color: rgb(43, 32, 32);
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li a {
+    color: #ffaecf;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.content {
+    display: grid;
+    padding: 0 15px;
+}
+
+.article {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.article-left {
+    width: 65%;
+    background-color: antiquewhite;
+    margin-right: 20px;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left .content-topleft {
+    width: 100%;
+}
+
+.content-left .content-topleft img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-left .content-botleft {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left .content-botleft a {
+    padding: 10px 0;
+}
+
+.article-right {
+    width: 35%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-topright {
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-ul.menungang a{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    color: yellow;
-    font-size: 15px;
-    display: block;
-    padding-top: 7px;
-    padding-left: 45px;
-    padding-right: 45x;
-    transition: 0.3s;
-}
-ul.menungang a:hover {
-    color: rgb(174, 185, 52);
-}
-ul.menungang input[]{
-    float: right;
-}
-
-.slideshow {
-    background-color: blue;
-}
-
-.slideshow img {
-    object-fit: fill;
+.article-topright .content-topright {
     width: 100%;
-    height: 200px;
 }
+
+.article-topright .content-topright img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-topright .content-botright {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-topright .content-botright a {
+    padding: 10px 0;
+}
+
+.article-botright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-botright .content-topright {
+    width: 100%;
+}
+
+.article-botright .content-topright img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-botright .content-botright {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-botright .content-botright a {
+    padding: 10px 0;
+}
+.business {
+    margin-bottom: 15px;
+}
+
+.business h2 {
+    margin-bottom: 15px;
+}
+
+.article-business {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.business-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black
+}
+
+.business-content a {
+    padding: 0 15px;
+}
+
+footer {
+    margin-top: 10px;
+    padding: 0 15px;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.right-footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.copyright {
+    text-align: center;
+}
+h3{
+    padding-top: 2%;
+    font-size: 160%;
+    padding-bottom: 2%;
+}
+
+
+
 
 /* CSS của mục contact */
 
-body{
+body {
     background-color: #e1f4f1;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Poppins' sans-serif;
 }
-.container{
-    width: 80%;
-    margin: 50px auto;
-}
-.contact-box{
+
+
+
+.contact-box {
+    max-width: 1300px;
     display: flex;
     background: white;
+    justify-content: center;
+    
 }
-.contact-left{
+
+.contact-left {
     flex-basis: 60%;
-    padding: 20px 40px;
+    padding: 25px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 25px;
+    margin-top: 3%;
 }
-.contact-right{
+
+.contact-right {
     flex-basis: 40%;
-    padding: 20px;
+    padding: 25px;
     background-color: rgb(49, 43, 244);
     color: white;
+    margin-top: 3%;
 }
-h1{
+
+h1 {
     margin-bottom: 10px;
     padding-top: 2%;
-    padding-left: 10%;
 }
-p{
-    padding-left: 10%;
-    font-size: 15px;
+
+.contact-box p{
+    padding-left: 2%;
+    font-size: 18px;
+    text-align: start;
 }
-h3{
+
+h2 {
     font-size: 200%;
+    padding-bottom: 2%;
 }
-.container p{
+
+h5 {
+    font-size: 200%;
+    padding-left: 4%;
+}
+
+.container p {
     margin-bottom: 40px;
 }
-button{
+
+
+button {
     background: rgb(67, 67, 240);
     width: 100px;
     border: none;
@@ -106,15 +271,75 @@ button{
     height: 35px;
     border-radius: 5px;
     margin-top: 20px;
-    box-shadow: 0px 5px 15px 0px rgba(28, 0 , 181, 0.3);
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+    transition: 0.3;
 }
-.contact-left h3{
+.contact-left button:hover {
+    background-color: #3429b4;
+}
+
+.contact-left h3 {
     color: #1904f8;
 }
-tr rd:first-child{
+
+tr rd:first-child {
     padding-right: 20px;
 }
-tr td{
+
+tr td {
     padding-top: 30px;
     padding-left: 20px;
 }
+
+
+
+
+
+/* CSS of About */
+.about-box{
+    display: flex;
+    background-color: #e0dddd;
+    align-items: center;
+}
+.about-left{
+    flex-basis: 60%;
+    padding: 20px 40px;
+    
+}
+.about-right{
+    flex-basis: 70%;
+    padding: 20px;
+}
+.about-box h2{
+    font-size: 700%;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10% ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fcfefe;
+    letter-spacing: 6px;
+}
+.about-right h3{
+    padding-bottom: 5%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 200% ;
+}
+.about-right p1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2.0;
+    font-size: 125% ;
+}
+
+h6{
+    text-align: center;
+    font-size: 300%;
+    text-decoration: underline;
+    font-family: math;
+    color: #457c3a;
+    padding-bottom: 15px 
+}
+
+
+
+
+

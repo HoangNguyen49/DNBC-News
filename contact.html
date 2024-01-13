@@ -5,37 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact DNBC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    
 </head>
+
 <body>
-    <h1>Connect With Us</h1>
-    <p>We would love our readers to respond and contact with us, visit DNBC News website for breaking news and the latest top stories in world news, business, politics, health and culture.</p>
-
     <div class="container">
+        <header class="header">
+            <img src="./images/k14_logo2022.svg" alt="">
+        </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index1.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#">Today in World</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-github"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+        </nav>
+     <h1>Connect With Us</h1>
+    <p2>We would love our readers to respond and contact with us, visit DNBC News website for breaking news and the latest top stories in world news, business, politics, health and culture.</p2>
         <div class="contact-box">
-
             <div class="contact-left">
-                <h3>Get in touch</h3> <br>
-                <form>
+                <h2>Get in touch</h2> <br>
+                <form action="" id="form_contact">
                    <div class="input-row">
                     <div class="input-group">
-                        <input type="text" placeholder="Name">
+                        <input type="text" name="fname" id="fname" placeholder="Name" required pattern=pattern="[a-z A-Z]+">
                     </div><br>
 
                     <div class="input-group">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" required>
                     </div><br>
 
                     <div class="input-group">
-                        <input type="tel" placeholder="Phone">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone" required pattern="\d{9,10}">
                     </div><br>
                     <textarea name="message" id="message"  rows="10" cols="70" placeholder="Message"></textarea>
                    </div> 
-                   <button type="submit">Send Message</button>
+                   <button class="button" name="sendmessage" id="sendmessage" type="submit">Send Message</button>
                 </form>
             </div>
 
             <div class="contact-right">
-                <h3>Contact Us</h3>
+                <h5>Contact Us</h5>
                 <table>
                     <tr>
                         <td>Email: </td>
@@ -47,19 +68,40 @@
                     </tr>
                     <tr>
                         <td>Website:</td>
-                        <td> <a style="color: azure;" href="./index.html"> DNBCNews.com</a></td>
+                        <td> <a style="color: azure;" href="./index1.html"> Visit our Website</a></td>
                     </tr>
                     <tr>
                         <td>Address: </td>
-                        <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.58519602238!2d-0.2664050245106186!3d51.52852620113952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2zTHXDom4gxJDDtG4sIFbGsMahbmcgUXXhu5FjIEFuaA!5e0!3m2!1svi!2s!4v1704431233398!5m2!1svi!2s" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                        <td><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1277846.7087445266!2d-0.4266222!3d51.2781044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1704510029160!5m2!1sen!2s" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy" ,referrerpolicy="no-referrer-when-downgrade"></iframe></td>
                     </tr>
                 </table>
             </div>
+            
         </div>
-
-
-
+        <footer>
+            <h3>DNBC News</h3>
+            <div class="main-footer">
+                <div class="left-footer"> 
+                    <p>Agency of FPT Aptech</p>
+                    <p>Editorial Director: Ngo Nguyen Hoang Tuan</p>
+                    <p>License to operate electronic newspapers DNBC: No. 421/HT - FPT Aptech Ho Chi Minh, January 11, 2024</p>
+                </div>
+                <div class="right-footer">
+                    <p>Editorial office: 2nd Floor, 590 Cach Mang Thang Tam, Ward 11, District 3, HCM</p>
+                    <p>Hotline: <a href="tel:0931 313 329">0931 313 329</a></p>
+                    <p type="Email">Email: <a href="mailto:aptech.fpt@fe.edu.vn">aptech.fpt@fe.edu.vn</a></p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2023 Copyright: FPT Aptech</p>
+        </footer>
     </div>
-    
 </body>
+<script>
+    document.getElementById("form_contact").onsubmit = function (event) {
+        event.preventDefault();
+        alert("Thank you for contact us, we will reply as soon as we can!!!");
+        window.location.href = "./index1.html";
+    }
+</script>
 </html>
