@@ -1,31 +1,50 @@
-const businessBtn = document.getElementById("business");
-const sportsBtn = document.getElementById("sport");
+const indiaBtn = document.getElementById("india");
+const usBtn = document.getElementById("us");
+const twBtn = document.getElementById("tw");
+const japanBtn = document.getElementById("japan");
+const koreaBtn = document.getElementById("kr");
 const newsType = document.getElementById("newsType");
 const newsdetails = document.getElementById("newsdetails");
 
 var newsDataArr = [];
 
 const API_KEY = "9b653ea549f642d6a150464d1fb2ebd0";
-const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=Us&category=business&apiKey=";
-const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=Us&category=sports&apiKey=";
+const INDIA_NEWS = "https://newsapi.org/v2/top-headlines?country=in&apiKey=";
+const US_NEWS = "https://newsapi.org/v2/top-headlines?country=us&apiKey=";
+const KOREA_NEWS = "https://newsapi.org/v2/top-headlines?country=kr&apiKey=";
+const JAPAN_NEWS ="https://newsapi.org/v2/top-headlines?country=jp&apiKey=";
+const TW_NEWS ="https://newsapi.org/v2/top-headlines?country=nl&apiKey=";
 
 
-
-businessBtn.addEventListener("click",function(){
-    newsType.innerHTML="<h4>Business</h4>";
-    fetchBusinessNews();
+indiaBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>India</h4>";
+    fetchIndiaNews();
 });
 
-sportsBtn.addEventListener("click",function(){
-    newsType.innerHTML="<h4>Sports</h4>";
-    fetchSportsNews();
+usBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>US</h4>";
+    fetchUsNews();
+});
+
+twBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>TW</h4>";
+    fetchTwNews();
+});
+
+japanBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>JP</h4>";
+    fetchJapanNews();
+});
+
+koreaBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>HK</h4>";
+    fetchKoreaNews();
 });
 
 
 
-
-const fetchBusinessNews = async () => {
-    const response = await fetch(BUSINESS_NEWS+API_KEY);
+const fetchIndiaNews = async () => {
+    const response = await fetch(INDIA_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
@@ -40,8 +59,8 @@ const fetchBusinessNews = async () => {
     displayNews();
 }
 
-const fetchSportsNews = async () => {
-    const response = await fetch(SPORTS_NEWS+API_KEY);
+const fetchUsNews = async () => {
+    const response = await fetch(US_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
@@ -56,7 +75,53 @@ const fetchSportsNews = async () => {
     displayNews();
 }
 
+const fetchTwNews = async () => {
+    const response = await fetch(TW_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
 
+    displayNews();
+}
+
+const fetchJapanNews = async () => {
+    const response = await fetch(JAPAN_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
+
+const fetchKoreaNews = async () => {
+    const response = await fetch(KOREA_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
 
 function displayNews() {
     newsdetails.innerHTML = "";
