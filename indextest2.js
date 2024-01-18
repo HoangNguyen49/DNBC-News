@@ -13,7 +13,7 @@ const INDIA_NEWS = "https://newsapi.org/v2/top-headlines?country=in&apiKey=";
 const US_NEWS = "https://newsapi.org/v2/top-headlines?country=us&apiKey=";
 const KOREA_NEWS = "https://newsapi.org/v2/top-headlines?country=kr&apiKey=";
 const JAPAN_NEWS ="https://newsapi.org/v2/top-headlines?country=jp&apiKey=";
-const TW_NEWS ="https://newsapi.org/v2/top-headlines?country=nl&apiKey=";
+const TW_NEWS ="https://newsapi.org/v2/top-headlines/sources?country=usapiKey=";
 
 
 indiaBtn.addEventListener("click",function(){
