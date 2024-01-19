@@ -5,35 +5,20 @@ const newsdetails = document.getElementById("newsdetails");
 
 var newsDataArr = [];
 
-const API_KEY = "9b653ea549f642d6a150464d1fb2ebd0";
+const API_KEY = "76646ac460794ef69acf3bba25c1c60f";
 const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=Us&category=business&apiKey=";
 const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=Us&category=sports&apiKey=";
 
-
-
-businessBtn.addEventListener("click",function(){
-    newsType.innerHTML="<h4>Business</h4>";
-    fetchBusinessNews();
-});
-
-sportsBtn.addEventListener("click",function(){
-    newsType.innerHTML="<h4>Sports</h4>";
-    fetchSportsNews();
-});
-
-
-
-
 const fetchBusinessNews = async () => {
-    const response = await fetch(BUSINESS_NEWS+API_KEY);
+    const response = await fetch(BUSINESS_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300) {
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>No data found.</h5>";
         return;
     }
 
@@ -41,22 +26,20 @@ const fetchBusinessNews = async () => {
 }
 
 const fetchSportsNews = async () => {
-    const response = await fetch(SPORTS_NEWS+API_KEY);
+    const response = await fetch(SPORTS_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300) {
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>No data found.</h5>";
         return;
     }
 
     displayNews();
 }
-
-
 
 function displayNews() {
     newsdetails.innerHTML = "";
@@ -121,3 +104,10 @@ function displayNews() {
         newsdetails.appendChild(col);
     });
 }
+
+// Add these lines at the end of your script
+// newsType.innerHTML = "<h4>Business</h4>";
+// fetchBusinessNews();
+
+newsType.innerHTML = "<h4>Sports</h4>";
+fetchSportsNews();
